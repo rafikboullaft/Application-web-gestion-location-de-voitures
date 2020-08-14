@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
+		
+		<bean id="voitureDao" class="com.car.mvc.dao.impl.IVoitureDaoImpl"/>
+		<bean id="voitureService" class="com.car.mvc.sevices.impl.VoitureServiceImpl"> 
+		 <property name="dao" ref="voitureDao"></property>
+		</bean>
+		
+		<bean id="clientDao" class="com.car.mvc.dao.impl.IClientDaoImpl"/>
+		<bean id="clientService" class="com.car.mvc.sevices.impl.ClientServiceImpl"> 
+		 <property name="dao1" ref="clientDao"></property>
+		</bean>
+		
+			<bean id="reservationDao" class="com.car.mvc.dao.impl.IReservationDaoImpl"/>
+		<bean id="reservationService" class="com.car.mvc.sevices.impl.ReservationServiceImpl"> 
+		 <property name="dao2" ref="reservationDao"></property>
+		</bean>
+		</beans>
